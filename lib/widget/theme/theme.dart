@@ -1,0 +1,65 @@
+import 'package:flutter/material.dart';
+import 'package:flutter/services.dart';
+import 'package:mobile/widget/shared/theme_color.dart';
+import 'package:mobile/widget/size_config.dart';
+import 'package:mobile/widget/theme/constanta.dart';
+
+ThemeData theme() {
+  return ThemeData(
+    scaffoldBackgroundColor: const Color.fromRGBO(249, 249, 249, 1),
+    fontFamily: "Poppins",
+    appBarTheme: appBarTheme(),
+    textTheme: textTheme(),
+    inputDecorationTheme: inputDecorationTheme(),
+    visualDensity: VisualDensity.adaptivePlatformDensity,
+  );
+}
+
+InputDecorationTheme inputDecorationTheme() {
+  OutlineInputBorder outlineInputBorder = OutlineInputBorder(
+    borderRadius: BorderRadius.circular(15),
+    borderSide: const BorderSide(color: kTextColor),
+    gapPadding: 10,
+  );
+  return InputDecorationTheme(
+    floatingLabelBehavior: FloatingLabelBehavior.auto,
+    contentPadding: EdgeInsets.fromLTRB(
+        getProportionateScreenWidth(20),
+        getProportionateScreenHeight(20),
+        getProportionateScreenWidth(20),
+        getProportionateScreenHeight(20)),
+    enabledBorder: outlineInputBorder,
+    focusedBorder: outlineInputBorder,
+    border: outlineInputBorder,
+  );
+}
+
+TextTheme textTheme() {
+  return const TextTheme(
+    bodyText1: TextStyle(color: kTextColor),
+    bodyText2: TextStyle(color: kTextColor),
+  );
+}
+
+AppBarTheme appBarTheme() {
+  return AppBarTheme(
+    color: Colors.blue[600],
+    elevation: 0,
+    iconTheme: const IconThemeData(color: Colors.white),
+    systemOverlayStyle: SystemUiOverlayStyle.light,
+    toolbarTextStyle: const TextTheme(
+      headline6: TextStyle(
+          color: Colors.white,
+          fontSize: 18,
+          fontWeight: FontWeight.bold,
+          fontFamily: "Poppins"),
+    ).bodyText2,
+    titleTextStyle: TextTheme(
+      headline6: TextStyle(
+          color: Colors.white,
+          fontSize: 18,
+          fontWeight: FontWeight.bold,
+          fontFamily: "Poppins"),
+    ).headline6,
+  );
+}
