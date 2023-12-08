@@ -25,7 +25,7 @@ class _MainPageState extends State<MainPage> {
     const Poin(),
     // const NotifikasiView(),
     // const AbsensiView(),
-    const ProfileView(),
+    const DataDiri(),
   ];
   List<dynamic> bottomItems = [
     BottomNavigationItem("Latihan", "assests/icons/approval.svg"),

@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:mobile/routes/app_routes.dart';
 import 'package:mobile/widget/shared/theme_color.dart';
 import 'package:mobile/widget/size_config.dart';
 
@@ -26,7 +27,7 @@ class _UjianState extends State<Ujian> {
                 Container(
                   width: _screen.width,
                   height: _screen.height * 0.35,
-                  color: kPrimaryColorujian,
+                  color: kPrimaryColorprime,
                   child: Image.asset(
                     "assests/logo/amico.png",
                     height: getProportionateScreenHeight(200),
@@ -118,11 +119,16 @@ class _UjianState extends State<Ujian> {
                                     padding:
                                         EdgeInsets.symmetric(horizontal: 75),
                                     elevation: 2,
-                                    backgroundColor: kPrimaryColorujian),
-                                onPressed: () {},
+                                    backgroundColor: kPrimaryColorprime),
+                                onPressed: () {
+                                  Navigator.pushNamed(
+                                    context,
+                                    Routes.UJIAN,
+                                  );
+                                },
                                 child: Text(
                                   "Mulai",
-                                  style: TextStyle(color: Colors.black),
+                                  style: TextStyle(color: Colors.white),
                                 ))
                           ],
                         ),
@@ -179,11 +185,16 @@ class _UjianState extends State<Ujian> {
                                     padding:
                                         EdgeInsets.symmetric(horizontal: 75),
                                     elevation: 2,
-                                    backgroundColor: kPrimaryColorujian),
-                                onPressed: () {},
+                                    backgroundColor: kPrimaryColorprime),
+                                onPressed: () {
+                                  Navigator.pushNamed(
+                                    context,
+                                    Routes.UJIAN,
+                                  );
+                                },
                                 child: Text(
                                   "Mulai",
-                                  style: TextStyle(color: Colors.black),
+                                  style: TextStyle(color: Colors.white),
                                 ))
                           ],
                         ),
